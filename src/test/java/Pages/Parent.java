@@ -6,6 +6,7 @@ public class Parent {
         System.out.println("******");
         System.out.println("faruk");
         System.out.println(" Emirhan");
+        System.out.println("Zehra");
 
     }
 }

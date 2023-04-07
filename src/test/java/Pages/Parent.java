@@ -8,5 +8,6 @@ public class Parent {
         System.out.println(" Emirhan");
         System.out.println("Zehra");
 
+        System.out.println("eski");
     }
 }

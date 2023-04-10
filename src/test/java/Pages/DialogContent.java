@@ -13,6 +13,19 @@ public class DialogContent extends Parent{
         PageFactory.initElements(GWD.getDriver(),this);
     }
 
+
+    @FindBy(xpath= "//input[@formcontrolname='username']")
+    private WebElement usernameLogin;
+
+    @FindBy(xpath= "//input[@formcontrolname='password']")
+    private WebElement passwordLogin;
+
+    @FindBy(xpath= "//button[@aria-label='LOGIN']")
+    private WebElement loginButton;
+
+    @FindBy(xpath = "//mat-form-field//input[@data-placeholder='Name']")
+    private WebElement searchInput;
+
     @FindBy(xpath= " ")
     private WebElement deleteDialogBtn;
 
@@ -23,10 +36,45 @@ public class DialogContent extends Parent{
     private WebElement searchButton;
 
     @FindBy(xpath= " ")
-    private WebElement searchInput;
-
-    @FindBy(xpath= " ")
     private WebElement successMessage;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -51,10 +99,10 @@ public class DialogContent extends Parent{
 
         switch (strButton){
 
-//             case "": return ;
-//             case "": return ;
-//             case "": return ;
-//             case "": return ;
+             case "usernameLogin": return usernameLogin;
+             case "passwordLogin": return passwordLogin;
+             case "loginButton": return loginButton;
+             case "searchInput": return searchInput;
 //             case "": return ;
 //             case "": return ;
 

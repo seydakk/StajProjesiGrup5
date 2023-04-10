@@ -11,8 +11,19 @@ public class LeftNav extends Parent{
         PageFactory.initElements(GWD.getDriver(),this);
     }
 
-    @FindBy(xpath= " ")
-    private WebElement add;
+    @FindBy(xpath = "//span[@class='mat-tooltip-trigger logo-text']")
+    public WebElement txtTechnoStudy;
+
+    @FindBy(xpath = "//span[text()='Human Resources']")
+    public WebElement humanResources;
+
+    @FindBy(xpath = "(//span[text()='Setup'])[3]")
+    public WebElement setupInHumanR;
+
+    @FindBy(xpath = "//span[text()='Position Categories']")
+    public WebElement positionCategories;
+
+
 
 
 
@@ -68,9 +79,9 @@ public class LeftNav extends Parent{
 
         switch (strButton){
 
-//             case "": return ;
-//             case "": return ;
-//             case "": return ;
+             case "humanResources": return humanResources;
+             case "setupInHumanR": return setupInHumanR;
+             case "positionCategories": return positionCategories;
 //             case "": return ;
 //             case "": return ;
 //             case "": return ;

@@ -17,14 +17,14 @@ public class GWD {
     public static WebDriver getDriver(){
 
 
-        Locale.setDefault(new Locale("EN")); // extend report türkçe bilgisayarların çalışmaması sebebiyle kondu
-        System.setProperty("user.language", "EN"); // extend report türkçe bilgisayarların çalışmaması sebebiyle kondu
+        Locale.setDefault(new Locale("EN"));
+        System.setProperty("user.language", "EN");
 
         Logger logger= Logger.getLogger("");
         logger.setLevel(Level.SEVERE);
         System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
 
-        if (driver==null) { // 1 kere çalışsın diye if yazıldı
+        if (driver==null) {
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--remote-allow-origins=*");
             driver = new ChromeDriver(options);

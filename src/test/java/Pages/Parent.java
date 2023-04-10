@@ -40,7 +40,6 @@ public class Parent {
         wait.until(ExpectedConditions.textToBePresentInElement(element, value));
         Assert.assertTrue(element.getText().toLowerCase().contains(value.toLowerCase()), "no such text.");
         new Actions(GWD.getDriver()).sendKeys(Keys.ESCAPE).perform();
-        //Açık dialog kutusu varsa kapat // NEDEN keyDown, keyUp değilde sendkeys yazdık
     }
 
 

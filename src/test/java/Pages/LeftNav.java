@@ -12,41 +12,25 @@ public class LeftNav extends Parent{
     }
 
     @FindBy(xpath = "//span[@class='mat-tooltip-trigger logo-text']")
-    public WebElement txtTechnoStudy;
+    private WebElement txtTechnoStudy;
 
     @FindBy(xpath = "//span[text()='Human Resources']")
-    public WebElement humanResources;
+    private WebElement humanResources;
 
     @FindBy(xpath = "(//span[text()='Setup'])[3]")
-    public WebElement setupInHumanR;
+    private WebElement setupInHumanR;
 
     @FindBy(xpath = "//span[text()='Position Categories']")
-    public WebElement positionCategories;
+    private WebElement positionCategories;
 
+    @FindBy(xpath="")
+    private WebElement setup;
 
+    @FindBy(xpath="")
+    private WebElement parameters;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    @FindBy(xpath="")
+    private WebElement fields;
 
 
 
@@ -79,10 +63,14 @@ public class LeftNav extends Parent{
 
         switch (strButton){
 
+             case "txtTechnoStudy": return txtTechnoStudy;
              case "humanResources": return humanResources;
              case "setupInHumanR": return setupInHumanR;
              case "positionCategories": return positionCategories;
-//             case "": return ;
+             case "setup": return setup;
+             case "parameters": return parameters;
+             case "fields": return fields;
+
 //             case "": return ;
 //             case "": return ;
 

@@ -6,6 +6,7 @@ import Utilities.GWD;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -20,7 +21,7 @@ public class _00_DataTableSteps {
     LeftNav ln=new LeftNav();
     DialogContent dc=new DialogContent();
 
-    @And("Click on the element in LeftNav")
+    @When("Click on the element in LeftNav")
     public void clickOnTheElementInLeftNav(DataTable items) {
         List<String> strButtons = items.asList(String.class);
         for(String strButton:strButtons){

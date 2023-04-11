@@ -23,8 +23,8 @@ Feature: As an Admin User I should be able to Add-Edit-Delete Position Categorie
     Then Verify contains text
       | successMessage | successfully |
 
-#    Then Display required element
-#      | searchInput |
+    Then Display required element
+      | searchInput |
 
   Scenario: (SP-1-TC-02) Check Add new position category with same data - Negative Scenario
 

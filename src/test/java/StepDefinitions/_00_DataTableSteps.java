@@ -73,6 +73,7 @@ public class _00_DataTableSteps {
         for (int i = 0; i < items.size(); i++) {
             WebElement element = dc.getWebElement(items.get(i).get(0));
             dc.selectFunction(element,items.get(i).get(1));
+
         }
     }
     //  //Gerekirse kullanılacak

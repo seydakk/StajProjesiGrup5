@@ -64,9 +64,11 @@ public class DialogContent extends Parent{
     @FindBy(xpath= "//ms-table//td/div[contains(text(),'no data to display')]")
     private WebElement verifyDelete;
 
+    @FindBy(xpath= "(//div[contains(@class,'mat-select-arrow-wrapper')])[2]")
+    private WebElement selectarrow;
 
-
-
+    @FindBy(xpath= "//span[text()=' Logical ']")
+    private WebElement logical;
 
 
 
@@ -123,6 +125,8 @@ public class DialogContent extends Parent{
              case "selectFieldType": return selectFieldType;
              case "alreadyExists": return alreadyExists;
              case "verifyDelete": return verifyDelete;
+             case "logical": return logical;
+             case "selectarrow": return selectarrow;
 
         }
 

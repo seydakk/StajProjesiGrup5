@@ -29,11 +29,12 @@ public class Parent {
         element.click();
     }
 
-    public void selectFunction(WebElement element, String text) {
+    public void selectFunction(WebElement element,String text) {
         waitUntilVisible(element);
         scrollToElement(element);
         Select selectMenu=new Select(element);
         selectMenu.selectByVisibleText(text);
+
     }
 
     public void verifyContainsTextFunction(WebElement element, String value) {

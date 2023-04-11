@@ -24,21 +24,39 @@ public class DialogContent extends Parent{
     private WebElement loginButton;
 
     @FindBy(xpath = "//mat-form-field//input[@data-placeholder='Name']")
-    private WebElement searchInput;
+    private WebElement searchName;
 
-    @FindBy(xpath= " ")
+    @FindBy(xpath= "//ms-add-button[contains(@tooltip,'ADD')]//button")
+    private WebElement addButton;
+    @FindBy(xpath= "//button[@type='submit']")
     private WebElement deleteDialogBtn;
 
-    @FindBy(xpath= " ")
+    @FindBy(xpath= "(//ms-delete-button//button)[1]")
     private WebElement deleteButton;
 
-    @FindBy(xpath= " ")
+    @FindBy(xpath= "//ms-search-button//button")
     private WebElement searchButton;
 
-    @FindBy(xpath= " ")
+    @FindBy(xpath= "(//ms-edit-button//button)[1]")
+    private WebElement editButton;
+
+    @FindBy(xpath= "(//mat-form-field//input)[2]")
+    private WebElement searchCode;
+
+    @FindBy(xpath= "//ms-save-button//button")
+    private WebElement saveButton;
+
+    @FindBy(xpath= "//*[contains(text(),'successfully')]")
     private WebElement successMessage;
 
+    @FindBy(xpath= "//ms-text-field[@formcontrolname='name']//input")
+    private WebElement nameInput;
 
+    @FindBy(xpath= "//ms-text-field[@formcontrolname='code']//input")
+    private WebElement codeInput;
+
+    @FindBy(xpath= "//mat-select[@formcontrolname='type']")
+    private WebElement selectFieldType;
 
 
 
@@ -61,7 +79,7 @@ public class DialogContent extends Parent{
 
     public void deleteItem(String searchText){
 
-        sendKeysFunction(searchInput, searchText);
+        sendKeysFunction(searchName, searchText);
         clickFunction(searchButton);
         //beklet
         // StaleElementReferenceException hatası veriyor. bayatlayan element
@@ -83,9 +101,15 @@ public class DialogContent extends Parent{
              case "usernameLogin": return usernameLogin;
              case "passwordLogin": return passwordLogin;
              case "loginButton": return loginButton;
-             case "searchInput": return searchInput;
-//             case "": return ;
-//             case "": return ;
+             case "searchName": return searchName;
+             case "addButton": return addButton;
+             case "deleteButton": return deleteButton;
+             case "deleteDialogBtn": return deleteDialogBtn;
+             case "searchButton": return searchButton;
+             case "editButton": return editButton;
+             case "searchCode": return searchCode;
+             case "saveButton": return saveButton;
+             case "successMessage": return successMessage;
 
         }
 

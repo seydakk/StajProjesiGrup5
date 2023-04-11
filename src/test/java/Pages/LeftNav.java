@@ -23,13 +23,13 @@ public class LeftNav extends Parent{
     @FindBy(xpath = "//span[text()='Position Categories']")
     private WebElement positionCategories;
 
-    @FindBy(xpath="")
+    @FindBy(xpath="//span[text()='Setup']")
     private WebElement setup;
 
-    @FindBy(xpath="")
+    @FindBy(xpath="//span[text()='Parameters']")
     private WebElement parameters;
 
-    @FindBy(xpath="")
+    @FindBy(xpath="//span[text()='Fields']")
     private WebElement fields;
 
 

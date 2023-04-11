@@ -11,6 +11,27 @@ Feature: As an Admin User I should be able to Add-Edit-Delete Fields under Param
 
   Scenario: (SP-4-TC-01) Check Add new field - Positive Scenario
 
+    And Click on the element in Dialog
+
+      | addButton |
+
+    And User sending the keys in Dialog Content
+
+      | nameInput | group5testing |
+      | codeInput | 12345         |
+
+    And Select on the element in Dialog
+
+      | selectFieldType | Text |
+
+    And Click on the element in Dialog
+
+      | saveButton |
+
+    Then Verify contains text
+
+      | successMessage | successfully |
+
 
   Scenario: (SP-4-TC-02) Check Add new field with same data - Negative Scenario
 

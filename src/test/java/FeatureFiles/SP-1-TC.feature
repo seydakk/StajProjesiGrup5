@@ -3,14 +3,13 @@ Feature: As an Admin User I should be able to Add-Edit-Delete Position Categorie
   Background:
     Given  I log in as an Admin
 
-  Scenario: (SP-1-TC-01) Check Add new position category - Positive Scenario
-
     When Click on the element in LeftNav
 
       | humanResources     |
       | setupInHumanR      |
       | positionCategories |
 
+  Scenario: (SP-1-TC-01) Check Add new position category - Positive Scenario
 
 
 
@@ -18,7 +17,10 @@ Feature: As an Admin User I should be able to Add-Edit-Delete Position Categorie
 
 
 
-    And Display required element
+
+
+
+    Then Display required element
 
     |searchInput|
 

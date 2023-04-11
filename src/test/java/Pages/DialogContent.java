@@ -58,6 +58,14 @@ public class DialogContent extends Parent{
     @FindBy(xpath= "//mat-select[@formcontrolname='type']")
     private WebElement selectFieldType;
 
+    @FindBy(xpath= "//*[contains(text(),'already exists')]")
+    private WebElement alreadyExists;
+
+    @FindBy(xpath= "//ms-table//td/div[contains(text(),'no data to display')]")
+    private WebElement verifyDelete;
+
+
+
 
 
 
@@ -113,6 +121,8 @@ public class DialogContent extends Parent{
              case "nameInput": return nameInput;
              case "codeInput": return codeInput;
              case "selectFieldType": return selectFieldType;
+             case "alreadyExists": return alreadyExists;
+             case "verifyDelete": return verifyDelete;
 
         }
 

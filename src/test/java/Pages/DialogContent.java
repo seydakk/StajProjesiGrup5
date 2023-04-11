@@ -110,6 +110,9 @@ public class DialogContent extends Parent{
              case "searchCode": return searchCode;
              case "saveButton": return saveButton;
              case "successMessage": return successMessage;
+             case "nameInput": return nameInput;
+             case "codeInput": return codeInput;
+             case "selectFieldType": return selectFieldType;
 
         }
 

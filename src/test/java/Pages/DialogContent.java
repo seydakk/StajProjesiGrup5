@@ -70,6 +70,9 @@ public class DialogContent extends Parent{
     @FindBy(xpath= "//span[text()=' Logical ']")
     private WebElement logical;
 
+    @FindBy(xpath= " //ms-integer-field[@placeholder='GENERAL.FIELD.CAPACITY']//input")
+    private WebElement capacity;
+
 
 
 

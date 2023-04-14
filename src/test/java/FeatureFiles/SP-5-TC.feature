@@ -30,15 +30,21 @@ Feature: Admin User should be able to Add Positions under Resources Setup
 
   Scenario: (SP-5-TC-02) Admin should have already created a new positions - Negative Scenario
 
+    And Click on the element in Dialog
+
+      | addButton |
+
     And User sending the keys in Dialog Content
-      | searchNameInHumanR      | Kito Mamaseverrr |
-      | searchShortNameInHumanR | kitoş            |
+      | nameInput | Kito Mamaseverrr |
+
+    And User sending the keys in Dialog Content
+      | shortName | kitoş |
 
     And Click on the element in Dialog
-      | searchButton |
+      | saveButton |
 
-    # Then Verify contains text
-    #  | alreadyExists | already exists |
+    Then Verify contains text
+      | alreadyExists | already exists |
 
 
   Scenario: (SP-5-TC-03) Admin should have already created a new positions
@@ -77,8 +83,8 @@ Feature: Admin User should be able to Add Positions under Resources Setup
     And Click on the element in Dialog
       | deleteDialogBtn |
 
-    # Then Verify contains text
-    #  | successMessage | successfully |
+    Then Verify contains text
+      | successMessage | successfully |
 
 
   Scenario: (SP-5-TC-05) Admin User should not be able to access deleted Positions under Resources Setup
@@ -90,33 +96,5 @@ Feature: Admin User should be able to Add Positions under Resources Setup
     And Click on the element in Dialog
       | searchButton |
 
-   # Then Verify contains text
-   #   | verifyDelete | no data to display |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    Then Verify contains text
+      | verifyDelete | no data to display |

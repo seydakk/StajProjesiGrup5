@@ -1,5 +1,6 @@
 package StepDefinitions;
 
+
 import Pages.DialogContent;
 import Utilities.GWD;
 import io.cucumber.java.en.Given;
@@ -22,6 +23,5 @@ public class SP_1_TC {
         dc.clickFunction(dc.getWebElement("loginButton"));
      //   dc.verifyContainsTextFunction(dc.getWebElement("txtTechnoStudy"),"Techno Study");
     }
-
 
 }

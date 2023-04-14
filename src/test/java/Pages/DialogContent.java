@@ -7,6 +7,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import java.util.List;
+
 public class DialogContent extends Parent{
 
     public DialogContent() {
@@ -109,6 +111,24 @@ public class DialogContent extends Parent{
     @FindBy(xpath= "//span[text()=' Employment ']")
     private WebElement employment;
 
+    @FindBy(xpath= "//td[text()='group5testing']/following-sibling::td[3]//ms-edit-button")
+    private WebElement group5testingEditBtn;
+
+    @FindBy(xpath= "//td[@role='cell']")
+    private List<WebElement> resultlist;
+    //td[text()='group5testing']/following-sibling::td[3]//ms-edit-button
+
+    @FindBy(xpath= "//td[contains(@class,'cdk-column-name')]")
+    private List<WebElement> nameresultlist;
+
+    @FindBy(xpath= "//td[contains(@class,'cdk-column-code')]")
+    private List<WebElement> coderesultlist;
+
+    @FindBy(xpath= "//td[contains(@class,'cdk-column-buttons')]//ms-edit-button")
+    private List<WebElement> editbuttonlist;
+
+    @FindBy(xpath= "//td[contains(@class,'cdk-column-buttons')]//ms-delete-button")
+    private List<WebElement> deletebuttonlist;
 
 
 
@@ -170,9 +190,24 @@ public class DialogContent extends Parent{
              case "selectStageNewDoc": return selectStageNewDoc;
              case "employment": return employment;
              case "selectStageEditDoc": return selectStageEditDoc;
+             case "group5testingEditBtn": return group5testingEditBtn;
 
         }
 
         return null;
     }
+
+    public List<WebElement> getWebElementlist(String strList) {
+
+        switch (strList) {
+            case "resultlist": return resultlist;
+            case "nameresultlist": return nameresultlist;
+            case "coderesultlist": return coderesultlist;
+            case "editbuttonlist": return editbuttonlist;
+            case "deletebuttonlist": return deletebuttonlist;
+
+        }
+        return null;
+    }
+
 }

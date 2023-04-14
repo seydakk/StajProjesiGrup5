@@ -91,8 +91,14 @@ public class DialogContent extends Parent{
     @FindBy(xpath= "//span[text()=' USD ']")
     private WebElement usdInCurrency;
 
+    @FindBy(xpath = "(//input[@data-placeholder='Short Name'])[2]")
+    private  WebElement shortName;
 
+    @FindBy(xpath = "//ms-text-field[@placeholder='GENERAL.FIELD.NAME']//input")
+    private WebElement searchNameInHumanR;
 
+    @FindBy(xpath = "//ms-text-field[@placeholder='GENERAL.FIELD.SHORTNAME']//input")
+    private  WebElement searchShortNameInHumanR;
 
 
 
@@ -151,6 +157,10 @@ public class DialogContent extends Parent{
              case "currency": return currency;
              case "tryInCurrency": return tryInCurrency;
              case "usdInCurrency": return usdInCurrency;
+             case "shortName": return shortName;
+             case "searchNameInHumanR":return searchNameInHumanR;
+             case "searchShortNameInHumanR": return searchShortNameInHumanR;
+
 
         }
 

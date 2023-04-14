@@ -7,6 +7,7 @@ import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -35,7 +36,6 @@ public class _00_DataTableSteps {
         List<String> dialogBtns=items.asList(String.class);
         for (String dialogBtn: dialogBtns) {
             WebElement element = dc.getWebElement(dialogBtn);
-            wait.until(ExpectedConditions.visibilityOf(dc.getWebElement(dialogBtn)));
             dc.clickFunction(element);
         }
     }
@@ -76,13 +76,14 @@ public class _00_DataTableSteps {
 
         }
     }
-    //  //Gerekirse kullanılacak
+      //Gerekirse kullanılacak
     @Then("Display required element")
     public void displayRequiredElement(DataTable dt) {
         List<String> items = dt.asList(String.class);
         for (String dialogBtn : items){
             WebElement element=dc.getWebElement(dialogBtn);
             dc.waitUntilVisible(element);
+            //wait.until(ExpectedConditions.visibilityOf(dc.getWebElement(dialogBtn)));
             Assert.assertTrue(element.isDisplayed(),"no such element");
         }
     }

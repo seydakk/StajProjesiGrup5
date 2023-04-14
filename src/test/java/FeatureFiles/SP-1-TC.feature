@@ -60,13 +60,8 @@ Feature: As an Admin User I should be able to Add-Edit-Delete Position Categorie
 
   Scenario: (SP-1-TC-04) Check Delete the position category - Positive Scenario
 
-    And User sending the keys in Dialog Content
-      | searchName | Quality |
-
-    And Click on the element in Dialog
-      | searchButton    |
-      | deleteButton    |
-      | deleteDialogBtn |
+    And User delete item from Dialog Content
+    |Quality|
 
     Then Verify contains text
       | successMessage | successfully |

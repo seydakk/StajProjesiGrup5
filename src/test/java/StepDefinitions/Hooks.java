@@ -13,7 +13,7 @@ public class Hooks {
         System.out.println("Senaryo bitti");
 
         if (senaryo.isFailed()){
-            TakesScreenshot ts= (TakesScreenshot) GWD.getDriver();
+            TakesScreenshot ts=(TakesScreenshot) GWD.getDriver();
             final byte[] hafizadakiHali=ts.getScreenshotAs(OutputType.BYTES);
             senaryo.attach(hafizadakiHali, "image/png","screenshot name");
         }

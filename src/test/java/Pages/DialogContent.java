@@ -70,8 +70,11 @@ public class DialogContent extends Parent{
     @FindBy(xpath= "//span[text()=' Logical ']")
     private WebElement logical;
 
-    @FindBy(xpath= " //ms-integer-field[@placeholder='GENERAL.FIELD.CAPACITY']//input")
+    @FindBy(xpath= "//ms-integer-field[@placeholder='GENERAL.FIELD.CAPACITY']//input")
     private WebElement capacity;
+
+    @FindBy(xpath= "(//mat-form-field)[1]")
+    private WebElement searchBox;
 
 
 
@@ -130,6 +133,7 @@ public class DialogContent extends Parent{
              case "verifyDelete": return verifyDelete;
              case "logical": return logical;
              case "selectarrow": return selectarrow;
+             case "searchBox": return searchBox;
 
         }
 

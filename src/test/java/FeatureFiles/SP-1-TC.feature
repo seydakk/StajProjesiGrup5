@@ -24,7 +24,7 @@ Feature: As an Admin User I should be able to Add-Edit-Delete Position Categorie
       | successMessage | successfully |
 
     Then Display required element
-      | searchInput |
+      | searchBox |
 
   Scenario: (SP-1-TC-02) Check Add new position category with same data - Negative Scenario
 
@@ -61,7 +61,7 @@ Feature: As an Admin User I should be able to Add-Edit-Delete Position Categorie
   Scenario: (SP-1-TC-04) Check Delete the position category - Positive Scenario
 
     And User delete item from Dialog Content
-    |Quality|
+      | Quality |
 
     Then Verify contains text
       | successMessage | successfully |

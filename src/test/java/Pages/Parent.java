@@ -41,8 +41,6 @@ public class Parent {
         wait.until(ExpectedConditions.textToBePresentInElement(element, value));
         Assert.assertTrue(element.getText().toLowerCase().contains(value.toLowerCase()), "no such text.");
         new Actions(GWD.getDriver()).sendKeys(Keys.ESCAPE).perform();
-        wait.until(ExpectedConditions.invisibilityOf(element));
-
     }
 
 

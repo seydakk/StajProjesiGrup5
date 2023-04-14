@@ -35,6 +35,9 @@ public class LeftNav extends Parent{
     @FindBy(xpath="//span[text()='Departments']")
     private WebElement departments;
 
+    @FindBy(xpath="//span[text()='Bank Accounts']")
+    private WebElement bankAccount;
+
 
 
 
@@ -60,6 +63,7 @@ public class LeftNav extends Parent{
              case "parameters": return parameters;
              case "fields": return fields;
              case "departments": return departments;
+             case "bankAccount": return bankAccount;
 
 //             case "": return ;
 //             case "": return ;

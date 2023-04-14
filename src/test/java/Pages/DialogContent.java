@@ -76,8 +76,20 @@ public class DialogContent extends Parent{
     @FindBy(xpath= "(//mat-form-field)[1]")
     private WebElement searchBox;
 
+    @FindBy(xpath= "//ms-text-field/input[@data-placeholder='IBAN']")
+    private WebElement iban;
 
+    @FindBy(xpath= "//ms-text-field[@formcontrolname='integrationCode']/input")
+    private WebElement integrationCode;
 
+    @FindBy(xpath= "//mat-select[@formcontrolname='currency']")
+    private WebElement currency;
+
+    @FindBy(xpath= "//span[text()=' TRY ']")
+    private WebElement tryInCurrency;
+
+    @FindBy(xpath= "//span[text()=' USD ']")
+    private WebElement usdInCurrency;
 
 
 
@@ -134,6 +146,11 @@ public class DialogContent extends Parent{
              case "logical": return logical;
              case "selectarrow": return selectarrow;
              case "searchBox": return searchBox;
+             case "iban": return iban;
+             case "integrationCode": return integrationCode;
+             case "currency": return currency;
+             case "tryInCurrency": return tryInCurrency;
+             case "usdInCurrency": return usdInCurrency;
 
         }
 

@@ -36,6 +36,7 @@ public class _00_DataTableSteps {
         List<String> dialogBtns = items.asList(String.class);
         for (String dialogBtn : dialogBtns) {
             WebElement element = dc.getWebElement(dialogBtn);
+           // dc.waitUntilVisible(element);
             dc.clickFunction(element);
         }
     }

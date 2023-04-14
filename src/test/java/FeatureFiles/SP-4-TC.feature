@@ -23,12 +23,7 @@ Feature: As an Admin User I should be able to Add-Edit-Delete Fields under Param
     And Click on the element in Dialog
 
       | selectarrow |
-      | logical |
-
-#    And Select on the element in Dialog
-#
-#      | selectFieldType | Logical |
-
+      | logical     |
 
     And Click on the element in Dialog
 

@@ -100,7 +100,14 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "//ms-text-field[@placeholder='GENERAL.FIELD.SHORTNAME']//input")
     private  WebElement searchShortNameInHumanR;
 
+    @FindBy(xpath= "(//div[contains(@class,'mat-select-arrow-wrapper')])[1]")
+    private WebElement selectStageEditDoc;
 
+    @FindBy(xpath= "(//div[contains(@class,'mat-select-arrow-wrapper')])[3]")
+    private WebElement selectStageNewDoc;
+
+    @FindBy(xpath= "//span[text()=' Employment ']")
+    private WebElement employment;
 
 
 
@@ -160,7 +167,9 @@ public class DialogContent extends Parent{
              case "shortName": return shortName;
              case "searchNameInHumanR":return searchNameInHumanR;
              case "searchShortNameInHumanR": return searchShortNameInHumanR;
-
+             case "selectStageNewDoc": return selectStageNewDoc;
+             case "employment": return employment;
+             case "selectStageEditDoc": return selectStageEditDoc;
 
         }
 

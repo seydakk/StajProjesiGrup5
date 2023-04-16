@@ -20,15 +20,6 @@ Feature: As an Admin User I should be able to Add-Edit-Delete Fields under Param
       | nameInput | group5testing |
       | codeInput | 12345         |
 
-    And Click on the element in Dialog
-
-      | selectarrow |
-      | logical     |
-
-#    And Select on the element in Dialog
-#
-#      | selectFieldType | Logical |
-
 
     And Click on the element in Dialog
 
@@ -37,6 +28,9 @@ Feature: As an Admin User I should be able to Add-Edit-Delete Fields under Param
     Then Verify contains text
 
       | successMessage | successfully |
+
+    Then Display required element
+      | searchBox |
 
 
   Scenario: (SP-8-TC-02) Check Add new field with same data - Negative Scenario
@@ -52,15 +46,6 @@ Feature: As an Admin User I should be able to Add-Edit-Delete Fields under Param
 
     And Click on the element in Dialog
 
-      | selectarrow |
-      | logical     |
-
-#    And Select on the element in Dialog
-#
-#      | selectFieldType | Logical |
-
-    And Click on the element in Dialog
-
       | saveButton |
 
     Then Verify contains text
@@ -70,16 +55,12 @@ Feature: As an Admin User I should be able to Add-Edit-Delete Fields under Param
 
   Scenario: (SP-8-TC-03) Check Edit the field - Positive Scenario
 
-    And User sending the keys in Dialog Content
-      | searchName | group5testing |
-      | searchCode | 12345         |
-
-    And Click on the element in Dialog
-      | searchButton |
-      | editButton   |
+    And Admin searches for data to be edited manually
+      | group5testing | 12345 |
 
     And User sending the keys in Dialog Content
       | nameInput | group5test |
+      | codeInput | 12345      |
 
     And Click on the element in Dialog
       | saveButton |
@@ -89,14 +70,10 @@ Feature: As an Admin User I should be able to Add-Edit-Delete Fields under Param
 
 
   Scenario: (SP-8-TC-04) Check Delete the field - Positive Scenario
-
-    And User sending the keys in Dialog Content
-      | searchName | group5test |
-      | searchCode | 12345      |
+    And Admin searches for data to be deleted manually
+      | group5test | 12345 |
 
     And Click on the element in Dialog
-      | searchButton    |
-      | deleteButton    |
       | deleteDialogBtn |
 
     Then Verify contains text
@@ -105,12 +82,8 @@ Feature: As an Admin User I should be able to Add-Edit-Delete Fields under Param
 
   Scenario: (SP-8-TC-05) Check Delete the field already deleted - Negative Scenario
 
-    And User sending the keys in Dialog Content
-      | searchName | group5test |
-      | searchCode | 12345      |
+    And Admin searches for data to be deleted manually
+      | group5test | 12345 |
 
-    And Click on the element in Dialog
-      | searchButton |
-
-    Then Verify contains text
-      | verifyDelete | no data to display |
+    Then Verify no data to display
+      | group5test | 12345 |

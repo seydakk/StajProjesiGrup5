@@ -33,6 +33,9 @@ Feature: As an Admin User I should be able to Add-Edit-Delete Fields under Param
 
       | successMessage | successfully |
 
+    Then Display required element
+      | searchBox |
+
 
   Scenario: (SP-4-TC-02) Check Add new field with same data - Negative Scenario
 

@@ -109,6 +109,12 @@ public class DialogContent extends Parent{
     @FindBy(xpath= "//span[text()=' Employment ']")
     private WebElement employment;
 
+    @FindBy(xpath= "(//ms-text-field[@placeholder='GENERAL.FIELD.SHORTNAME'])//input")
+    private WebElement locationShortName;
+
+    @FindBy(xpath="//mat-slide-toggle[@formcontrolname='active']")
+    private WebElement toggleBar;
+
 
 
 
@@ -170,6 +176,9 @@ public class DialogContent extends Parent{
              case "selectStageNewDoc": return selectStageNewDoc;
              case "employment": return employment;
              case "selectStageEditDoc": return selectStageEditDoc;
+             case "locationShortName": return locationShortName;
+             case "capacity": return capacity;
+             case "toggleBar": return toggleBar;
 
         }
 

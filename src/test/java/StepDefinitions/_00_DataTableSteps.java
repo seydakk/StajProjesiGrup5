@@ -28,6 +28,9 @@ public class _00_DataTableSteps {
         for (String strButton : strButtons) {
             WebElement element = ln.getWebElement(strButton);
             ln.clickFunction(element);
+          //  ln.clickFunction(ln.getWebElement("setup"));
+          //  ln.clickFunction(ln.getWebElement("setup"));
+          //  ln.clickFunction(ln.getWebElement("setup"));
         }
     }
 

@@ -148,6 +148,7 @@ public class DialogContent extends Parent{
 
 
 
+
     public void deleteItem(String searchText){
 
         sendKeysFunction(searchName, searchText);

@@ -28,6 +28,7 @@ Feature: Admin User should be able to Add Positions under Resources Setup
       | successMessage | successfully |
 
 
+
   Scenario: (SP-5-TC-02) Admin should have already created a new positions - Negative Scenario
 
     And Click on the element in Dialog

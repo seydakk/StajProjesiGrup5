@@ -24,6 +24,8 @@ Feature: As an Admin User I should be able to Add-Edit-Delete Documents under Pa
       | selectStageNewDoc |
       | employment        |
 
+    And Send the ESCAPE signal
+
     And Click on the element in Dialog
 
       | saveButton |
@@ -32,6 +34,8 @@ Feature: As an Admin User I should be able to Add-Edit-Delete Documents under Pa
 
       | successMessage | successfully |
 
+    Then Display required element
+      | searchBox |
 
   Scenario: (SP-3-TC-02) Check Add new document with same data - Negative Scenario
 
@@ -45,8 +49,10 @@ Feature: As an Admin User I should be able to Add-Edit-Delete Documents under Pa
 
     And Click on the element in Dialog
 
-      | selectStageEditDoc |
+      | selectStageNewDoc  |
       | employment         |
+
+    And Send the ESCAPE signal
 
     And Click on the element in Dialog
 
@@ -56,6 +62,8 @@ Feature: As an Admin User I should be able to Add-Edit-Delete Documents under Pa
 
       | alreadyExists | already exists |
 
+    Then Display required element
+      | searchBox |
 
   Scenario: (SP-3-TC-03) Check Edit the document - Positive Scenario
 
@@ -75,7 +83,7 @@ Feature: As an Admin User I should be able to Add-Edit-Delete Documents under Pa
 
     And User sending the keys in Dialog Content
 
-      | nameInput | group5test |
+      | nameInput | ggroup5test |
 
     And Click on the element in Dialog
       | saveButton |
@@ -83,13 +91,19 @@ Feature: As an Admin User I should be able to Add-Edit-Delete Documents under Pa
     Then Verify contains text
       | successMessage | successfully |
 
+    Then Display required element
+      | searchBox |
 
   Scenario: (SP-3-TC-04) Check Delete the field - Positive Scenario
 
     And User sending the keys in Dialog Content
 
-      | searchName | group5test |
-      | searchCode | 12345      |
+      | searchName | ggroup5test |
+
+    And Click on the element in Dialog
+
+      | selectStageEditDoc |
+      | employment         |
 
     And Click on the element in Dialog
 
@@ -101,13 +115,19 @@ Feature: As an Admin User I should be able to Add-Edit-Delete Documents under Pa
 
       | successMessage | successfully |
 
+    Then Display required element
+      | searchBox |
 
   Scenario: (SP-3-TC-05) Check Delete the field already deleted - Negative Scenario
 
     And User sending the keys in Dialog Content
 
-      | searchName | group5test |
-      | searchCode | 12345      |
+      | searchName | ggroup5test |
+
+    And Click on the element in Dialog
+
+      | selectStageEditDoc |
+      | employment         |
 
     And Click on the element in Dialog
 
@@ -116,3 +136,6 @@ Feature: As an Admin User I should be able to Add-Edit-Delete Documents under Pa
     Then Verify contains text
 
       | verifyDelete | no data to display |
+
+    Then Display required element
+      | searchBox |

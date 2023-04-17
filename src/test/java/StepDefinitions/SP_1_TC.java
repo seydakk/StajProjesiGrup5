@@ -3,6 +3,7 @@ package StepDefinitions;
 
 import Pages.DialogContent;
 import Utilities.GWD;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -23,5 +24,6 @@ public class SP_1_TC {
         dc.clickFunction(dc.getWebElement("loginButton"));
      //   dc.verifyContainsTextFunction(dc.getWebElement("txtTechnoStudy"),"Techno Study");
     }
+
 
 }

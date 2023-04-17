@@ -9,7 +9,7 @@ Feature:As an Admin User I should be able to Add-Edit-Delete Attestations Under 
       | setupInHumanR  |
       | Attestations   |
 
-  Scenario: (SP-1-TC-01) Check Add new Attestations - Positive Scenario
+  Scenario: (SP-2-TC-01) Check Add new Attestations - Positive Scenario
 
     And Click on the element in Dialog
       | addButton |
@@ -26,7 +26,7 @@ Feature:As an Admin User I should be able to Add-Edit-Delete Attestations Under 
     Then Display required element
       | searchBox |
 
-  Scenario: (SP-1-TC-02) Check Add new Attestations with same data - Negative Scenario
+  Scenario: (SP-2-TC-02) Check Add new Attestations with same data - Negative Scenario
 
     And Click on the element in Dialog
       | addButton |
@@ -40,7 +40,7 @@ Feature:As an Admin User I should be able to Add-Edit-Delete Attestations Under 
     Then Verify contains text
       | alreadyExists | already exists |
 
-  Scenario: (SP-1-TC-03) Check Edit the Attestations - Positive Scenario
+  Scenario: (SP-2-TC-03) Check Edit the Attestations - Positive Scenario
 
     And User sending the keys in Dialog Content
       | searchName | Sdet Man|
@@ -58,7 +58,7 @@ Feature:As an Admin User I should be able to Add-Edit-Delete Attestations Under 
     Then Verify contains text
       | successMessage | successfully |
 
-  Scenario: (SP-1-TC-04) Check Delete the Attestations - Positive Scenario
+  Scenario: (SP-2-TC-04) Check Delete the Attestations - Positive Scenario
 
     And User delete item from Dialog Content
       | Sdet |
@@ -66,7 +66,7 @@ Feature:As an Admin User I should be able to Add-Edit-Delete Attestations Under 
     Then Verify contains text
       | successMessage | successfully |
 
-  Scenario: (SP-1-TC-05) Check Delete the Attestations already deleted - Negative Scenario
+  Scenario: (SP-2-TC-05) Check Delete the Attestations already deleted - Negative Scenario
 
     And User sending the keys in Dialog Content
       | searchName | Sdet |
